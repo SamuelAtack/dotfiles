@@ -69,9 +69,3 @@ gsettings set org.gnome.desktop.background picture-uri "file:///path/to/wallpape
 - CSS-like (rofi theme)
 - HTML + JavaScript (wallpaper generator)
 ```
-
----
-
-**Short description:**
-```
-Teal and orange Linux desktop setup — Conky, Polybar, Rofi, and a generative wallpaper generator.
