@@ -1,11 +1,11 @@
 # Teal Desktop Setup
-
-Teal and orange Linux desktop setup with Conky, Polybar, and Rofi.
+Teal and orange Linux desktop setup with Conky, Polybar, Rofi, and Starship.
 
 ## Features
 - Conky widget: CPU, RAM, disk, network, top processes, and live Google Calendar
 - Polybar: slim status bar with date, CPU, RAM, disk, wifi, and battery
 - Rofi: keyboard-driven app launcher (Alt+Space)
+- Starship: custom terminal prompt
 - Consistent teal, mint, and orange colour scheme across everything
 - All tools autostart on login
 
@@ -13,6 +13,7 @@ Teal and orange Linux desktop setup with Conky, Polybar, and Rofi.
 - `conky`
 - `polybar`
 - `rofi`
+- `starship`
 - `gcalcli` (authenticated with your Google account)
 - Ubuntu Mono font
 
@@ -56,10 +57,12 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 ```
 Replace `YOUR_USERNAME` with your username.
 
-### 4. Wallpaper
-Open `wallpaper/wallpaper-generator.html` in a browser, pick a seed, and download the PNG. Set it with:
+### 4. Starship
 ```bash
-gsettings set org.gnome.desktop.background picture-uri "file:///path/to/wallpaper.png"
+curl -sS https://starship.rs/install.sh | sh
+cp starship/starship.toml ~/.config/starship.toml
+echo 'eval "$(starship init bash)"' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ## Languages
@@ -67,5 +70,4 @@ gsettings set org.gnome.desktop.background picture-uri "file:///path/to/wallpape
 - Bash (shell scripts)
 - INI (polybar config)
 - CSS-like (rofi theme)
-- HTML + JavaScript (wallpaper generator)
-```
+- TOML (starship config)
