@@ -1,0 +1,86 @@
+* {
+    bg:         #0a0e1c;
+    bg-alt:     #0d1530;
+    fg:         #CCCCCC;
+    fg-sel:     #0a0e1c;
+    primary:    #00FFD0;
+    secondary:  #00CED1;
+    alert:      #FF8C00;
+
+    background-color:   transparent;
+    text-color:         @fg;
+    font:               "Ubuntu Mono 13";
+}
+
+window {
+    background-color:   @bg;
+    border:             2px;
+    border-color:       @secondary;
+    border-radius:      8px;
+    width:              500px;
+    padding:            12px;
+}
+
+mainbox {
+    background-color:   transparent;
+    children:           [ inputbar, listview ];
+    spacing:            10px;
+}
+
+inputbar {
+    background-color:   @bg-alt;
+    border:             0 0 2px 0;
+    border-color:       @primary;
+    border-radius:      4px;
+    padding:            10px 12px;
+    children:           [ prompt, textbox-prompt-colon, entry ];
+}
+
+prompt {
+    background-color:   transparent;
+    text-color:         @primary;
+    font:               "Ubuntu Mono Bold 13";
+}
+
+textbox-prompt-colon {
+    background-color:   transparent;
+    text-color:         @secondary;
+    str:                " › ";
+}
+
+entry {
+    background-color:   transparent;
+    text-color:         @fg;
+    placeholder:        "search...";
+    placeholder-color:  #444d66;
+}
+
+listview {
+    background-color:   transparent;
+    lines:              8;
+    columns:            1;
+    spacing:            4px;
+    scrollbar:          false;
+}
+
+element {
+    background-color:   transparent;
+    border-radius:      4px;
+    padding:            8px 12px;
+}
+
+element selected {
+    background-color:   @primary;
+    text-color:         @fg-sel;
+}
+
+element-text {
+    background-color:   transparent;
+    text-color:         inherit;
+}
+
+element-icon {
+    background-color:   transparent;
+    size:               24px;
+    padding:            0 8px 0 0;
+}
