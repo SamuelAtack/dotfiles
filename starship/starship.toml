@@ -1,0 +1,32 @@
+format = "$username$directory$git_branch$git_status$cmd_duration$character"
+
+[username]
+show_always = true
+format = "[$user ](fg:#FF8C00 bold)"
+
+[directory]
+style = "fg:#00FFD0 bold"
+format = "[$path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+
+[character]
+success_symbol = "[❯](fg:#00FFD0)"
+error_symbol = "[❯](fg:#FF8C00)"
+
+[git_branch]
+symbol = " "
+style = "fg:#00CED1"
+format = "[on $symbol$branch ]($style)"
+
+[git_status]
+style = "fg:#FF8C00"
+format = "[$all_status$ahead_behind ]($style)"
+
+[cmd_duration]
+min_time = 2000
+style = "fg:#80E8EB"
+format = "[took $duration ]($style)"
+
+[hostname]
+ssh_only = true
