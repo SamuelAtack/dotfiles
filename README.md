@@ -1,4 +1,4 @@
-# gorgon-dots
+# Teal Desktop Setup
 
 Teal and orange Linux desktop setup with Conky, Polybar, and Rofi.
 
